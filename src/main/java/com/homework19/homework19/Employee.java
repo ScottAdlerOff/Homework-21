@@ -1,16 +1,30 @@
 package com.homework19.homework19;
 
 import java.util.Objects;
+import java.util.Random;
 
 public class Employee {
     private String firstName;
     private String lastName;
+    private int departmentId;
+    private int salary;
 
 
 
     public Employee(String firstName, String lastName) {
+        Random random = new Random();
         this.firstName = firstName;
         this.lastName = lastName;
+        this.departmentId = random.nextInt(5) + 1;
+        this.salary = random.nextInt(10000) + 1000;
+    }
+
+    public int getDepartmentId() {
+        return departmentId;
+    }
+
+    public int getSalary() {
+        return salary;
     }
 
     public String getFirstName() {
@@ -29,10 +43,10 @@ public String getFullName() {return firstName + " " + lastName;}
     }
     @Override
     public int hashCode(){
-        return Objects.hash(firstName,lastName);
+        return Objects.hash(firstName,lastName, salary, departmentId);
     }
     @Override
     public String toString(){
-        return "Employee{" + "firstName='" + firstName + '\'' + ", lastName='" + lastName + '\'' + '}';
+        return "Employee{" + "firstName='" + firstName + '\'' + ", lastName='" + lastName + '\'' + ", salary='" + salary + '\'' + ", department='" + '}';
     }
 }
