@@ -12,11 +12,19 @@ import static java.util.Comparator.comparingInt;
 import static java.util.stream.Collectors.groupingBy;
 
 @Service
-public class DepartmenrServiceImpl implements DepartmentService{
+public class DepartmentServiceImpl implements DepartmentService{
     private final EmployeeService employeeService;
 
-    public DepartmenrServiceImpl(EmployeeService employeeService) {
+    public DepartmentServiceImpl(EmployeeService employeeService) {
         this.employeeService = employeeService;
+    }
+
+    @Override
+    public Integer getDepartmentSalarySum(int departmentId) {
+        return employeeService.findAll().stream()
+                .filter(e -> e.getDepartmentId() == departmentId)
+                .mapToInt(Employee::getSalary)
+                .sum();
     }
 
     @Override

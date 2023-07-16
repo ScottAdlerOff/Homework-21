@@ -1,7 +1,5 @@
 package com.homework19.homework19;
 
-import org.springframework.util.StringUtils;
-
 import java.util.Objects;
 import java.util.Random;
 
@@ -15,7 +13,7 @@ public class Employee {
 
 
 
-    public Employee(String firstName, String lastName) {
+    public Employee(String firstName, String lastName, int salary, int departmentId) {
         Random random = new Random();
         this.firstName = capitalize(firstName.toLowerCase());
         this.lastName = capitalize(lastName.toLowerCase());
