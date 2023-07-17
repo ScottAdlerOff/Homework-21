@@ -15,7 +15,7 @@ class EmployeeServiceImplTest {
 
     @Test
     public void shouldAddEmployee(){
-        Employee employee = new Employee(FIRST_NAME,LAST_NAME, SALARY, DEPARTMENT_ID);
+        Employee employee = new Employee(FIRST_NAME,LAST_NAME);
         assertFalse(employeeService.findAll().contains(employee));
 
         Employee addedEmployee = employeeService.add(FIRST_NAME,LAST_NAME, SALARY, DEPARTMENT_ID);
