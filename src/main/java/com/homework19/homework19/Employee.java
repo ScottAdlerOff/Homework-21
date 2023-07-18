@@ -13,7 +13,7 @@ public class Employee {
 
 
 
-    public Employee(String firstName, String lastName, int salary, int departmentId) {
+    public Employee(String firstName, String lastName) {
         Random random = new Random();
         this.firstName = capitalize(firstName.toLowerCase());
         this.lastName = capitalize(lastName.toLowerCase());
