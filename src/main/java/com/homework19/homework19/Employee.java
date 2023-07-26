@@ -14,11 +14,8 @@ public class Employee {
 
 
     public Employee(String firstName, String lastName) {
-        Random random = new Random();
         this.firstName = capitalize(firstName.toLowerCase());
         this.lastName = capitalize(lastName.toLowerCase());
-        this.departmentId = random.nextInt(5) + 1;
-        this.salary = random.nextInt(10000) + 1000;
     }
 
     public int getDepartmentId() {
