@@ -1,7 +1,6 @@
 package com.homework19.homework19;
 
 import java.util.Objects;
-import java.util.Random;
 
 import static org.springframework.util.StringUtils.capitalize;
 
